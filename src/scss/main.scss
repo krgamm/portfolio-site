@@ -1,0 +1,6 @@
+// change namespace by using "as"
+// @use '...' as newName
+@use 'base';
+@use 'utilities';
+@use 'components';
+@use 'layout';
