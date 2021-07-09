@@ -14,5 +14,8 @@
     "modern-css-reset": "^1.4.0",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.33.0"
+  },
+  "dependencies": {
+    "lottie-web": "^5.7.11"
   }
 }
