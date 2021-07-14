@@ -77,10 +77,98 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.text-neutral-100 {
+  color: white;
+}
+
+.bg-neutral-100 {
+  color: white;
+}
+
+.text-neutral-200 {
+  color: #f7f7f7;
+}
+
+.bg-neutral-200 {
+  color: #f7f7f7;
+}
+
+.text-neutral-600 {
+  color: #363636;
+}
+
+.bg-neutral-600 {
+  color: #363636;
+}
+
+.text-neutral-700 {
+  color: #242424;
+}
+
+.bg-neutral-700 {
+  color: #242424;
+}
+
+.text-accent-blue {
+  color: #1e47b8;
+}
+
+.bg-accent-blue {
+  color: #1e47b8;
+}
+
+.text-accent-orange {
+  color: #e06238;
+}
+
+.bg-accent-orange {
+  color: #e06238;
+}
+
+.container {
+  padding: 0 1.5rem;
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
 nav {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  background: red;
+}
+
+@font-face {
+  font-family: "F37 Ginger", sans-serif;
+  src: url("/fonts/F37Ginger-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "F37 Ginger", sans-serif;
+  src: url("/fonts/F37Ginger-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+:root {
+  --clr-neutral-100: white;
+  --clr-neutral-200: #f7f7f7;
+  --clr-neutral-600: #363636;
+  --clr-neutral-700: #242424;
+  --clr-accent-blue: #1e47b8;
+  --clr-accent-orange: #e06238;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.563rem;
+  --fs-600: 1.953rem;
+  --fs-700: 2.441rem;
+  --fs-800: 3.052rem;
+}
+@media (min-width: 65em) {
+  :root {
+    --fs-300: 1rem;
+    --fs-400: 1.425rem;
+    --fs-500: 2rem;
+    --fs-600: 2.827rem;
+    --fs-700: 4rem;
+    --fs-800: 5.653rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

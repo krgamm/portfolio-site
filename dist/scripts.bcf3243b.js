@@ -18472,11 +18472,52 @@ var animationMenu = _lottieWeb.default.loadAnimation({
   animationData: _data.default
 });
 
-var directionMenu = 1;
+animationMenu.goToAndStop(25, true);
+var directionMenu = -1;
 iconMenu.addEventListener("click", function (e) {
+  changeColor();
   animationMenu.setDirection(directionMenu);
   animationMenu.play();
   directionMenu = -directionMenu;
+}); //----------------------------------------
+// Apply and change color of theme switcher
+//----------------------------------------
+
+var shapeEl = iconMenu.getElementsByTagName("path", "g");
+
+for (var i = 0; i < shapeEl.length; i++) {
+  shapeEl[i].classList.add("to-blue");
+}
+
+var count = 0;
+
+function changeColor() {
+  if (count === 0) {
+    for (var _i = 0; _i < shapeEl.length; _i++) {
+      shapeEl[_i].classList.add("to-orange");
+
+      shapeEl[_i].classList.remove("to-blue");
+    }
+
+    count = 1;
+  } else {
+    for (var _i2 = 0; _i2 < shapeEl.length; _i2++) {
+      shapeEl[_i2].classList.add("to-blue");
+
+      shapeEl[_i2].classList.remove("to-orange");
+    }
+
+    count = 0;
+  }
+} //----------------------------------------
+// Mobile Navigation
+//----------------------------------------
+
+
+var navToggle = document.querySelector("#mobile-menu-btn");
+navToggle.addEventListener("click", function () {
+  document.body.classList.toggle("nav-is-open");
+  document.body.classList.toggle("stop-scrolling");
 });
 },{"lottie-web":"../node_modules/lottie-web/build/player/lottie.js","./data.json":"scripts/data.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -18506,7 +18547,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62713" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60646" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

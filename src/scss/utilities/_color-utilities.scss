@@ -1,0 +1,32 @@
+@use 'src/scss/abstracts/colors' as *;
+@use "src/scss/abstracts/type-scale" as *;
+@use "src/scss/abstracts/mixins" as *;
+
+// Generates utility classes for BG and text colors
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .text-#{$color}-#{"" + $shade} {
+      color: $value;
+    }
+    .bg-#{$color}-#{"" + $shade} {
+      background-color: $value;
+    }
+  }
+}
+
+.to-blue {
+  fill: var(--clr-accent-blue);
+  stroke: var(--clr-accent-blue);
+  -webkit-transition: all 0.6s linear;
+  -moz-transition: all 0.6s linear;
+  -o-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+.to-orange {
+  fill: var(--clr-accent-orange);
+  stroke: var(--clr-accent-orange);
+  -webkit-transition: all 0.6s linear;
+  -moz-transition: all 0.6s linear;
+  -o-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}

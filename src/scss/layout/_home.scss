@@ -1,0 +1,51 @@
+#hero {
+  margin: 1.5em;
+  border-radius: 1em;
+  height: 80vh;
+}
+
+//-----------------------------------------
+// Section Styling
+//-----------------------------------------
+
+.work-section {
+  .section-title {
+    position: relative;
+    margin: 0 auto;
+  }
+  .section-title:before,
+  .section-title:after {
+    content: "";
+    display: block;
+    width: 25%;
+    height: 0.2rem;
+    background-color: var(--clr-neutral-600);
+    top: 45%;
+    position: absolute;
+  }
+  .section-title:before {
+    left: 0;
+  }
+  .section-title:after {
+    right: 0;
+  }
+}
+
+//-----------------------------------------
+// Project Card
+//-----------------------------------------
+
+.project-card {
+  overflow: hidden;
+  border-radius: 1em;
+  border: 3px solid var(--clr-neutral-700);
+  background-color: var(--clr-neutral-100);
+  margin: 2em 0;
+  .project-heading-wrapper {
+    padding: 1.5em 1em 1em 1em;
+    .project-btn-group {
+      display: flex;
+      margin-top: 1em;
+    }
+  }
+}
