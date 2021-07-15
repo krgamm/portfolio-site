@@ -24,7 +24,7 @@ a {
 }
 a:visited {
   text-decoration: none;
-  color: var(--clr-neutral-600);
+  color: none;
 }
 
 h1 {
@@ -254,7 +254,8 @@ section {
   overflow: hidden;
 }
 
-button {
+button,
+.base-btn {
   cursor: pointer;
   padding: 1em;
   box-shadow: 0px 0px 0px transparent;
@@ -275,19 +276,30 @@ button {
 
 .primary {
   background-color: var(--clr-accent-light-blue);
-  color: var(--clr-neutral-100);
+  margin-right: 1em;
   transition: all ease-in-out 250ms;
-}
-.primary:hover {
-  background-color: var(--clr-accent-blue);
   color: var(--clr-neutral-100);
+}
+@media (min-width: 768px) {
+  .primary:hover {
+    background-color: var(--clr-accent-blue);
+    transform: translateY(-2px);
+    color: var(--clr-neutral-100);
+    font-weight: 700;
+  }
 }
 
 .secondary {
   transition: all ease-in-out 250ms;
+  border: solid 2px transparent;
+  color: var(--clr-neutral-600);
 }
-.secondary:hover {
-  color: var(--clr-accent-orange);
+@media (min-width: 768px) {
+  .secondary:hover {
+    border: solid 2px var(--clr-accent-orange);
+    transform: translateY(-2px);
+    color: var(--clr-accent-orange);
+  }
 }
 
 .submit {
@@ -525,6 +537,32 @@ nav #middle {
   opacity: 0.7;
 }
 
+.project-card {
+  overflow: hidden;
+  border-radius: 1em;
+  border: 3px solid var(--clr-neutral-700);
+  background-color: var(--clr-neutral-100);
+  margin: 2em 0;
+}
+.project-card .project-heading-wrapper {
+  padding: 1.5em 1em 1em 1em;
+}
+.project-card .project-heading-wrapper .project-btn-group {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+}
+@media (min-width: 768px) {
+  .project-card {
+    margin: 0;
+    transition: all ease-in-out 250ms;
+  }
+  .project-card:hover {
+    box-shadow: 8px 8px 0 0 var(--clr-neutral-700);
+    transform: translate(-8px, -8px);
+  }
+}
+
 footer {
   background-color: var(--clr-neutral-100);
 }
@@ -582,21 +620,6 @@ footer .container span {
   right: 0;
 }
 
-.project-card {
-  overflow: hidden;
-  border-radius: 1em;
-  border: 3px solid var(--clr-neutral-700);
-  background-color: var(--clr-neutral-100);
-  margin: 2em 0;
-}
-.project-card .project-heading-wrapper {
-  padding: 1.5em 1em 1em 1em;
-}
-.project-card .project-heading-wrapper .project-btn-group {
-  display: flex;
-  margin-top: 1em;
-}
-
 @media (min-width: 768px) {
   .project-card-wrapper {
     display: grid;
@@ -605,15 +628,16 @@ footer .container span {
     gap: 2em;
     margin-top: 3em;
   }
-  .project-card-wrapper .project-card {
-    margin: 0;
-    transition: all ease-in-out 250ms;
-  }
-  .project-card-wrapper .project-card:hover {
-    box-shadow: 8px 8px 0 0 var(--clr-neutral-700);
-    transform: translate(-8px, -8px);
-  }
 }
+.project-block {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.project-intro-block {
+  display: flex;
+}
+
 :root {
   --clr-neutral-100: white;
   --clr-neutral-200: #f7f7f7;

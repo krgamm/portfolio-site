@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin's Portfolio</title>
     <link rel="stylesheet" href="scss/main.scss">
+
 </head>
 
-<body class="bg-neutral-100 text-netural-600">
 
+<body class="bg-neutral-100 text-netural-600">
     <!----------------------------------------------- Desktop Nav Bar ----------------------------------------------->
 
     <nav>
@@ -26,7 +27,8 @@
                 </a>
             </div>
             <ul id="middle" class="flex-row-centered-middle">
-                <li class="flex-row-centered-middle"><a href="#featured-work" id="work-link" class="nav-link">Work</a>
+                <li class="flex-row-centered-middle"><a href="./index.html#featured-work" id="work-link"
+                        class="nav-link">Work</a>
                 </li>
                 <li class="flex-row-centered-middle"><a href="#" id="about-link" class="nav-link">About</a></li>
                 <li class="flex-row-centered-middle"><a href="#" id="contact-link" class="nav-link">Contact</a></li>
@@ -85,22 +87,90 @@
         </ul>
 
     </nav>
-
-    <!----------------------------------------------- Hero Section ----------------------------------------------->
-
-    <section id="hero">
-        <div class="container ">
-            <div id="hero-content" class="bg-neutral-200 flex-row-centered-middle">
-                <h1 id="huge-title">Hello</h1>
-                <h2>I am Kevin Gammenthaler, a designer based in Nashville, TN, focused on product and web design.</h2>
+    <div class="project-blocks">
+        <div class="project-block project-intro-block container">
+            <div class="project-description">
+                <h2>A Music Festival of Giving.</h2>
+                <p>Island Party Music Festival is a philanthropy event hosted by the men of Beta Upsilon Chi raising
+                    money for Living Water International and The Bridge Ministries.</p>
+                <p>I was a member of this Christian Fraternity and had the opportunity to further solidify a robust
+                    brand. Below you will find the transformation between the 2018 and 2019 events.</p>
             </div>
-        </div>
-    </section>
+            <ul class="project-intro-details">
+                <li>
+                    <h3>Year</h3>
+                    <span>2019</span>
+                </li>
+                <li>
+                    <h3>Team</h3>
+                    <span>Island Party Committee</span>
+                </li>
+                <li>
+                    <h3>Client</h3>
+                    <span>Beta Upsilon Chi</span>
+                </li>
+                <li>
+                    <h3>Disciplines</h3>
+                    <span>Graphic Design</span>
+                    <span>Motion Design</span>
+                    <span>Photography</span>
+                </li>
+            </ul>
 
-    <!----------------------------------------------- Featured Work Section ----------------------------------------------->
+        </div>
+        <div class="project-block image-alone-full-width-block">
+            <img src="./images/IP19-Hero Image.png" alt="">
+        </div>
+        <div class="project-block project-content-block container">
+            <h2 class="h2-small">
+                Lets take a look at the past: Island Party 2018.
+            </h2>
+            <p>My primary responsibility as the graphic designer in 2018 was to establish a direction for the social
+                media graphics package. Below are some samples of what we ended up choosing.</p>
+        </div>
+        <div class="project-block image-grid-block container">
+            <img src="./images/IP19-Hero Image.png" alt="">
+            <img src="./images/IP19-Hero Image.png" alt="">
+            <img src="./images/IP19-Hero Image.png" alt="">
+            <img src="./images/IP19-Hero Image.png" alt="">
+        </div>
+        <div class="project-block project-content-block container">
+            <h2 class="h2-small">
+                A colorful explosion of gratitude.
+            </h2>
+            <p>For Island Party 2019, I was the Marketing Director / Lead Graphic Designer. We wanted the marketing
+                material to be eye-catching and we came up with two main focuses: revisiting the color shceme and
+                introduce motion graphics.</p>
+        </div>
+        <div class="project-block image-grid-block container">
+            <img src="./images/IP19-Hero Image.png" alt="">
+            <img src="./images/IP19-Hero Image.png" alt="">
+            <img src="./images/IP19-Hero Image.png" alt="">
+            <img src="./images/IP19-Hero Image.png" alt="">
+        </div>
+        <div class="project-block contained-media-with-space container">
+            <img src="./images/IP19-Hero Image.png" alt="">
+        </div>
+        <div class="project-block project-content-block container">
+            <h2 class="h2-small">
+                Pictures, pictures, and more pictures.
+            </h2>
+            <p>A problem we had for Island Party 2016 and 2017 was that we lacked any photos from the event. To solve
+                this in 2019, we organized a group of photographers to capture the event so we could continuously create
+                an archive of event photos.<br>Below are some select shots taken by me from our preliminary event —
+                Battle of the Bands — and Island
+                Party Music Festival 2019,</p>
+        </div>
+        <div class="project-block image-grid-block container">
+            <img src="./images/IP19-Hero Image.png" alt="">
+            <img src="./images/IP19-Hero Image.png" alt="">
+            <img src="./images/IP19-Hero Image.png" alt="">
+            <img src="./images/IP19-Hero Image.png" alt="">
+        </div>
+    </div>
     <section id="featured-work" class="work-section bg-neutral-200">
         <div class="container">
-            <h2 class="section-title">Featured</h2>
+            <h2 class="section-title">Similar Work</h2>
             <div class="project-card-wrapper">
 
                 <div class="project-card">
@@ -126,7 +196,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <img src="./images/IP19-Hero Image.png" alt="">
                     <div class="project-heading-wrapper">
@@ -138,146 +207,15 @@
                         </div>
                         <!-- Button Groups for each project -->
                         <div class="project-btn-group">
-                            <button class="primary">
-                                <span>View Project</span>
-                            </button>
-                            <button class="secondary">
 
-                                <span>Live Site</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!----------------------------------------------- Other Work Section ----------------------------------------------->
+                            <a class="primary base-btn flex-row-centered-middle" href="./island-party.html">
+                                View Project
+                            </a>
 
-    <section id="other-work" class="work-section bg-neutral-100">
-        <div class="container">
-            <h2 class="section-title">Work</h2>
-            <div class="project-card-wrapper">
-                <div class="project-card">
-                    <img src="./images/IP19-Hero Image.png" alt="">
-                    <div class="project-heading-wrapper">
 
-                        <!-- Basic project info -->
-                        <h2>Project Name</h2>
-                        <div id="project-tags">
-                            <h3>Project Tag #1</h3>
-                        </div>
-                        <!-- Button Groups for each project -->
-                        <div class="project-btn-group">
-                            <button class="primary">
-                                <span>View Project</span>
-                            </button>
-                            <button class="secondary">
-
-                                <span>Live Site</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="./images/IP19-Hero Image.png" alt="">
-                    <div class="project-heading-wrapper">
-
-                        <!-- Basic project info -->
-                        <h2>Project Name</h2>
-                        <div id="project-tags">
-                            <h3>Project Tag #1</h3>
-                        </div>
-                        <!-- Button Groups for each project -->
-                        <div class="project-btn-group">
-                            <button class="primary">
-                                <span>View Project</span>
-                            </button>
-                            <button class="secondary">
-
-                                <span>Live Site</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="./images/IP19-Hero Image.png" alt="">
-                    <div class="project-heading-wrapper">
-
-                        <!-- Basic project info -->
-                        <h2>Project Name</h2>
-                        <div id="project-tags">
-                            <h3>Project Tag #1</h3>
-                        </div>
-                        <!-- Button Groups for each project -->
-                        <div class="project-btn-group">
-                            <button class="primary">
-                                <span>View Project</span>
-                            </button>
-                            <button class="secondary">
-
-                                <span>Live Site</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="./images/IP19-Hero Image.png" alt="">
-                    <div class="project-heading-wrapper">
-
-                        <!-- Basic project info -->
-                        <h2>Project Name</h2>
-                        <div id="project-tags">
-                            <h3>Project Tag #1</h3>
-                        </div>
-                        <!-- Button Groups for each project -->
-                        <div class="project-btn-group">
-                            <button class="primary">
-                                <span>View Project</span>
-                            </button>
-                            <button class="secondary">
-
-                                <span>Live Site</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="./images/IP19-Hero Image.png" alt="">
-                    <div class="project-heading-wrapper">
-
-                        <!-- Basic project info -->
-                        <h2>Project Name</h2>
-                        <div id="project-tags">
-                            <h3>Project Tag #1</h3>
-                        </div>
-                        <!-- Button Groups for each project -->
-                        <div class="project-btn-group">
-                            <button class="primary">
-                                <span>View Project</span>
-                            </button>
-                            <button class="secondary">
-
-                                <span>Live Site</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="./images/IP19-Hero Image.png" alt="">
-                    <div class="project-heading-wrapper">
-
-                        <!-- Basic project info -->
-                        <h2>Project Name</h2>
-                        <div id="project-tags">
-                            <h3>Project Tag #1</h3>
-                        </div>
-                        <!-- Button Groups for each project -->
-                        <div class="project-btn-group">
-                            <button class="primary">
-                                <span>View Project</span>
-                            </button>
-                            <button class="secondary">
-                                <span>Live Site</span>
-                            </button>
+                            <a class="secondary base-btn flex-row-centered-middle" href="#">
+                                Live Site
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -353,6 +291,7 @@
         </div>
 
     </footer>
+
 
     <script src="./scripts/index.js"></script>
     <script src="./scripts/app.js"></script>

@@ -22,7 +22,7 @@ page-content
     - .carousel-nav-wrap
       - .carousel-nav
 
-  - .project-block image-gallery-block
+  - .project-block image-grid-block
   - .project-block image-alone-full-width-block
 
 types of image formats:

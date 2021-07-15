@@ -1,0 +1,11 @@
+@use "../abstracts/mixins" as *;
+
+.project-block {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.project-intro-block {
+  display: flex;
+  //   flex-direction: column;
+}

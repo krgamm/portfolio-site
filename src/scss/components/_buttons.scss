@@ -1,4 +1,8 @@
-button {
+@use '../abstracts/mixins' as *;
+@use '../abstracts/font-face' as *;
+
+button,
+.base-btn {
   cursor: pointer;
   padding: 1em;
   box-shadow: 0px 0px 0px transparent;
@@ -19,21 +23,30 @@ button {
 
 .primary {
   background-color: var(--clr-accent-light-blue);
-  color: var(--clr-neutral-100);
+  margin-right: 1em;
   transition: all ease-in-out 250ms;
-  &:hover {
-    background-color: var(--clr-accent-blue);
-    color: var(--clr-neutral-100);
+  color: var(--clr-neutral-100);
+  @include mq(medium) {
+    &:hover {
+      background-color: var(--clr-accent-blue);
+      transform: translateY(-2px);
+      color: var(--clr-neutral-100);
+      font-weight: $fw-b;
+    }
   }
 }
 .secondary {
   transition: all ease-in-out 250ms;
-
-  &:hover {
-    color: var(--clr-accent-orange);
+  border: solid 2px transparent;
+  color: var(--clr-neutral-600);
+  @include mq(medium) {
+    &:hover {
+      border: solid 2px var(--clr-accent-orange);
+      transform: translateY(-2px);
+      color: var(--clr-accent-orange);
+    }
   }
 }
-
 .submit {
   color: var(--clr-neutral-100);
   border: 2px solid var(--clr-neutral-100);

@@ -1,0 +1,30 @@
+@use "../abstracts/mixins" as *;
+
+//-----------------------------------------
+// Project Card
+//-----------------------------------------
+
+.project-card {
+  overflow: hidden;
+  border-radius: 1em;
+  border: 3px solid var(--clr-neutral-700);
+  background-color: var(--clr-neutral-100);
+  margin: 2em 0;
+  .project-heading-wrapper {
+    padding: 1.5em 1em 1em 1em;
+    .project-btn-group {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1em;
+    }
+  }
+
+  @include mq(medium) {
+    margin: 0;
+    transition: all ease-in-out 250ms;
+    &:hover {
+      box-shadow: 8px 8px 0 0 var(--clr-neutral-700);
+      transform: translate(-8px, -8px);
+    }
+  }
+}
