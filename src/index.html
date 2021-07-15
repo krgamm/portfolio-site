@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kevin's Portfolio</title>
     <link rel="stylesheet" href="scss/main.scss">
 
 </head>
 
-<body class="bg-neutral-200 text-netural-600">
+<body class="bg-neutral-100 text-netural-600">
 
     <!----------------------------------------------- Desktop Nav Bar ----------------------------------------------->
 
@@ -26,12 +26,17 @@
                     </svg>
                 </a>
             </div>
-
+            <ul id="middle" class="flex-row-centered-middle">
+                <li class="flex-row-centered-middle"><a href="#featured-work" id="work-link" class="nav-link">Work</a>
+                </li>
+                <li class="flex-row-centered-middle"><a href="#" id="about-link" class="nav-link">About</a></li>
+                <li class="flex-row-centered-middle"><a href="#" id="contact-link" class="nav-link">Contact</a></li>
+            </ul>
 
             <!----------------------------------------------- Mobile Nav Bar ----------------------------------------------->
-            <div id="mobile-menu">
-                <svg id="arrow-up" class="hidden" data-name="arrow-up" xmlns="http://www.w3.org/2000/svg"
-                    width="22.3998" height="24" viewBox="0 0 22.3998 24">
+            <div id="mobile-menu" class="flex-row-centered-middle">
+                <svg id="arrow-up" data-name="arrow-up" xmlns="http://www.w3.org/2000/svg" width="22.3998" height="24"
+                    viewBox="0 0 22.3998 24">
                     <path
                         d="M266.7314,256.3325a1.6,1.6,0,0,1-2.2627,0L257.6,249.4638v16.9374a1.6,1.6,0,1,1-3.2,0V249.4638l-6.8687,6.8687a1.6,1.6,0,0,1-2.2627-2.2627l9.6-9.6a1.6,1.6,0,0,1,2.2626,0l9.6,9.6A1.6,1.6,0,0,1,266.7314,256.3325Z"
                         transform="translate(-244.8001 -244.0012)" />
@@ -47,9 +52,9 @@
             <div id="following"><button id="theme-toggle"></button></div>
         </div>
         <ul id="nav-link-wrapper-mobile" class="flex-row-centered-middle">
-            <li><a href="#" class="nav-link">Work</a></li>
-            <li><a href="#" class="nav-link">About</a></li>
-            <li><a href="#" class="nav-link">Contact</a></li>
+            <li><a href="#" id="work-link" class="nav-link">Work</a></li>
+            <li><a href="#" id="about-link" class="nav-link">About</a></li>
+            <li><a href="#" id="contact-link" class="nav-link">Contact</a></li>
             <li>
                 <div class="social-links">
                     <a href="#"><svg id="github" data-name="github" xmlns="http://www.w3.org/2000/svg" width="24.6107"
@@ -84,9 +89,9 @@
 
     <!----------------------------------------------- Hero Section ----------------------------------------------->
 
-    <section id="hero" class="bg-neutral-100 flex-row-centered-middle">
-        <div class="container">
-            <div id="hero-content">
+    <section id="hero">
+        <div class="container ">
+            <div id="hero-content" class="bg-neutral-200 flex-row-centered-middle">
                 <h1 id="huge-title">Hello</h1>
                 <h2>I am Kevin Gammenthaler, a designer based in Nashville, TN, focused on product and web design.</h2>
             </div>
@@ -286,7 +291,7 @@
             </div>
             <form>
                 <div class="contact-row-1">
-                    <div class="floating-label">
+                    <div class="floating-label gap">
                         <label for="name">Name</label>
                         <input placeholder="Name" type="text" name="name" id="name" autocomplete="off">
                     </div>

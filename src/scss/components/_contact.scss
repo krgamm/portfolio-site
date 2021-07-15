@@ -1,4 +1,5 @@
 @use "../abstracts/font-face" as *;
+@use "../abstracts/mixins" as *;
 
 #contact {
   background-color: var(--clr-accent-light-blue);
@@ -24,6 +25,21 @@
   form {
     .floating-label {
       margin: 1em 0;
+    }
+    @include mq(medium) {
+      .floating-label {
+        margin-top: 0;
+      }
+      .contact-row-1 {
+        display: flex;
+        .gap {
+          margin-right: 1em;
+        }
+      }
+      #description {
+        width: 100%;
+        height: 125px;
+      }
     }
   }
   input,

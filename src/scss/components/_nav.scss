@@ -3,12 +3,23 @@
 #kg-logo svg {
   height: 50px;
   width: 50px;
+  path,
+  g {
+    fill: var(--clr-neutral-600);
+  }
 }
 
 #theme-toggle {
   height: 40px;
   width: 40px;
   padding: 0;
+  border-radius: 0.25em;
+  transition: all ease-in-out 250ms;
+  @include mq(medium) {
+    &:hover {
+      background-color: var(--clr-neutral-200);
+    }
+  }
 }
 
 nav {
@@ -16,28 +27,73 @@ nav {
   position: sticky;
   top: 0;
   z-index: 9;
-  background-color: var(--clr-neutral-200);
+  background-color: var(--clr-neutral-100);
   .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
+  #middle {
+    display: none;
+  }
+  @include mq(medium) {
+    #middle {
+      display: flex;
+      li {
+        margin: 0 0.25em;
+        &:hover {
+          .nav-link {
+            box-shadow: 4px 4px var(--clr-accent-blue);
+            border: solid 4px var(--clr-accent-blue);
+            transform: translate(-4px, -4px);
+            color: var(--clr-accent-blue);
+            transition: all ease-in-out 250ms;
+          }
+        }
+        .nav-link {
+          text-align: center;
+          height: 100%;
+          width: 100%;
+          background-color: var(--clr-neutral-100);
+          border: solid 4px transparent;
+          border-radius: 0.25em;
+          padding: 0.25em 1em;
+          color: var(--clr-neutral-600);
+          transition: all ease-in-out 250ms;
+        }
+      }
+    }
+  }
 }
 
+// ---------------------------------
+// Establishing Mobile Functionality
+// ---------------------------------
+
 #mobile-menu {
-  display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   z-index: 11;
+
+  transform: translateY(-10px);
+  transition: transform ease-in-out 250ms;
+
   #arrow-up,
   #arrow-down {
     height: 12px;
     width: 12px;
   }
+  #arrow-up {
+    fill-opacity: 0;
+    transition: fill-opacity ease-in-out 250ms;
+  }
   button {
     padding: 0;
+  }
+  @include mq(medium) {
+    display: none;
   }
 }
 
@@ -56,11 +112,30 @@ nav {
 
   transform: translateY(-100%);
   transition: transform ease-in-out 250ms;
+  @include mq(medium) {
+    display: none;
+  }
 }
 
 .nav-is-open {
   #nav-link-wrapper-mobile {
     transform: translateY(0%);
+  }
+  #mobile-menu {
+    button {
+      color: var(--clr-accent-blue);
+    }
+
+    transform: translateY(10px);
+
+    #arrow-up {
+      fill-opacity: 100;
+      fill: var(--clr-accent-blue);
+    }
+    #arrow-down {
+      fill-opacity: 0;
+      transition: fill-opacity ease-in-out 250ms;
+    }
   }
 }
 
@@ -71,6 +146,15 @@ nav {
     g,
     path {
       fill: var(--clr-accent-blue);
+    }
+    @include mq(medium) {
+      &:hover {
+        svg,
+        g,
+        path {
+          fill: var(--clr-accent-orange);
+        }
+      }
     }
   }
 }

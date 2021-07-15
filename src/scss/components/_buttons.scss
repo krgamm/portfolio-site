@@ -20,9 +20,27 @@ button {
 .primary {
   background-color: var(--clr-accent-light-blue);
   color: var(--clr-neutral-100);
+  transition: all ease-in-out 250ms;
+  &:hover {
+    background-color: var(--clr-accent-blue);
+    color: var(--clr-neutral-100);
+  }
+}
+.secondary {
+  transition: all ease-in-out 250ms;
+
+  &:hover {
+    color: var(--clr-accent-orange);
+  }
 }
 
 .submit {
   color: var(--clr-neutral-100);
   border: 2px solid var(--clr-neutral-100);
+  transition: all ease-in-out 250ms;
+
+  &:hover {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-accent-light-blue);
+  }
 }
