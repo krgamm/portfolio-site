@@ -722,17 +722,6 @@ footer .container span {
     margin-top: 3em;
   }
 }
-.project-block {
-  padding-top: 4em;
-  padding-bottom: 4em;
-}
-
-.project-intro-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 :root {
   --clr-neutral-100: white;
   --clr-neutral-200: #f7f7f7;

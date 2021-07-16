@@ -51,9 +51,10 @@ button,
   color: var(--clr-neutral-100);
   border: 2px solid var(--clr-neutral-100);
   transition: all ease-in-out 250ms;
-
-  &:hover {
-    background-color: var(--clr-neutral-100);
-    color: var(--clr-accent-light-blue);
+  @include mq(medium) {
+    &:hover {
+      background-color: var(--clr-neutral-100);
+      color: var(--clr-accent-light-blue);
+    }
   }
 }
