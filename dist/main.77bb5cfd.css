@@ -628,6 +628,29 @@ footer .container span {
     margin-top: 3em;
   }
 }
+#about .container h1 {
+  font-size: var(--fs-600);
+  line-height: 1.25;
+  margin-bottom: 1em;
+}
+#about .container h2 {
+  font-size: var(--fs-400);
+  margin: 1em 0;
+}
+#about .container .about-info {
+  display: flex;
+  flex-direction: column;
+}
+#about .container .about-info .social-links {
+  align-self: center;
+  margin: 1em 0;
+}
+
+.image-crop {
+  border-radius: 1em;
+  overflow: hidden;
+}
+
 .project-block {
   padding-top: 4em;
   padding-bottom: 4em;
@@ -718,6 +741,11 @@ footer .container span {
   .image-grid-block img {
     margin: 0;
   }
+}
+
+video {
+  width: 100%;
+  height: 100%;
 }
 
 :root {

@@ -1,0 +1,29 @@
+@use "../abstracts/mixins" as *;
+@use '../abstracts/font-face' as *;
+
+#about {
+  .container {
+    h1 {
+      font-size: var(--fs-600);
+      line-height: 1.25;
+      margin-bottom: 1em;
+    }
+    h2 {
+      font-size: var(--fs-400);
+      margin: 1em 0;
+    }
+    .about-info {
+      display: flex;
+      flex-direction: column;
+      .social-links {
+        align-self: center;
+        margin: 1em 0;
+      }
+    }
+  }
+}
+
+.image-crop {
+  border-radius: 1em;
+  overflow: hidden;
+}
