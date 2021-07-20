@@ -1,15 +1,25 @@
 @use "../abstracts/mixins" as *;
 @use '../abstracts/font-face' as *;
-
+// -----------------------------
+// Project Block General Styling
+// -----------------------------
 .project-block {
   padding-top: 4em;
   padding-bottom: 4em;
 }
 
+// -----------------------------
+// Intro (Hero) Block Styling
+// -----------------------------
 .project-intro-block {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  .project-title-h2 {
+    font-size: var(--fs-600);
+    line-height: 1.25;
+    margin-bottom: 0.5em;
+  }
   .project-intro-details {
     padding: 1em;
     border: solid 3px var(--clr-neutral-600);
@@ -33,6 +43,9 @@
       }
     }
   }
+  // -----------------------------
+  // Intro (Hero) Block Styling (Desktop)
+  // -----------------------------
   @include mq(medium) {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -51,12 +64,9 @@
   }
 }
 
-.project-title-h2 {
-  font-size: var(--fs-600);
-  line-height: 1.25;
-  margin-bottom: 0.5em;
-}
-
+// -----------------------------
+//  Project Content Block
+// -----------------------------
 .project-content-block {
   background-color: var(--clr-neutral-200);
   padding-top: 1em;
@@ -64,6 +74,9 @@
   h2 {
     margin-bottom: 0.5em;
   }
+  // -----------------------------
+  //  Project Content Block (Desktop)
+  // -----------------------------
   @include mq(medium) {
     .container {
       display: flex;
@@ -77,10 +90,16 @@
   }
 }
 
+// -----------------------------
+//  Image Grid Block
+// -----------------------------
 .image-grid-block {
   img {
     margin: 1em 0;
   }
+  // -----------------------------
+  //  Image Grid Block (Desktop)
+  // -----------------------------
   @include mq(medium) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -96,3 +115,11 @@ video {
   width: 100%;
   height: 100%;
 }
+
+// .carousel-wrap {
+//   border: 5px solid black;
+//   .carousel-slide {
+//     display: flex;
+//     overflow: hidden;
+//   }
+// }

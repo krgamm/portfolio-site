@@ -4,6 +4,7 @@
   padding-top: 0;
   @include mq(medium) {
     padding-bottom: 6em;
+    padding-top: 3em;
   }
   #hero-content {
     border-radius: 1em;

@@ -122,7 +122,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"/Users/kevin/Qsync/web-development/portfolio 2021/portfolio-site/src/fonts/F37Ginger-Bold.woff":[["F37Ginger-Bold.4cb42458.woff","fonts/F37Ginger-Bold.woff"],"fonts/F37Ginger-Bold.woff"],"/Users/kevin/Qsync/web-development/portfolio 2021/portfolio-site/src/fonts/F37Ginger-Regular.woff":[["F37Ginger-Regular.8311781c.woff","fonts/F37Ginger-Regular.woff"],"fonts/F37Ginger-Regular.woff"],"/Users/kevin/Qsync/web-development/portfolio 2021/portfolio-site/src/fonts/Race1BranntPlusChiseledNcv-6Op1.ttf":[["Race1BranntPlusChiseledNcv-6Op1.7e534b81.ttf","fonts/Race1BranntPlusChiseledNcv-6Op1.ttf"],"fonts/Race1BranntPlusChiseledNcv-6Op1.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"/Users/kevin/Qsync/web-development/portfolio 2021/portfolio-site/src/fonts/F37Ginger-Bold.woff":[["F37Ginger-Bold.4cb42458.woff","fonts/F37Ginger-Bold.woff"],"fonts/F37Ginger-Bold.woff"],"/Users/kevin/Qsync/web-development/portfolio 2021/portfolio-site/src/fonts/F37Ginger-Regular.woff":[["F37Ginger-Regular.8311781c.woff","fonts/F37Ginger-Regular.woff"],"fonts/F37Ginger-Regular.woff"],"/Users/kevin/Qsync/web-development/portfolio 2021/portfolio-site/src/fonts/Race1BranntPlusChiseledNcv-6Op1.ttf":[["Race1BranntPlusChiseledNcv-6Op1.7e534b81.ttf","fonts/Race1BranntPlusChiseledNcv-6Op1.ttf"],"fonts/Race1BranntPlusChiseledNcv-6Op1.ttf"],"/Users/kevin/Qsync/web-development/portfolio 2021/portfolio-site/src/images/IMG_2060 2.JPG":[["IMG_2060 2.30c16199.JPG","images/IMG_2060 2.JPG"],"images/IMG_2060 2.JPG"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -150,7 +150,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49410" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63725" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

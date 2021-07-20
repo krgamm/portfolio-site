@@ -18489,17 +18489,17 @@ for (var i = 0; i < shapeEl.length; i++) {
   shapeEl[i].classList.add("to-blue");
 }
 
-var count = 0;
+var themeCount = 0;
 
 function changeColor() {
-  if (count === 0) {
+  if (themeCount === 0) {
     for (var _i = 0; _i < shapeEl.length; _i++) {
       shapeEl[_i].classList.add("to-orange");
 
       shapeEl[_i].classList.remove("to-blue");
     }
 
-    count = 1;
+    themeCount = 1;
   } else {
     for (var _i2 = 0; _i2 < shapeEl.length; _i2++) {
       shapeEl[_i2].classList.add("to-blue");
@@ -18507,7 +18507,7 @@ function changeColor() {
       shapeEl[_i2].classList.remove("to-orange");
     }
 
-    count = 0;
+    themeCount = 0;
   }
 } //----------------------------------------
 // Mobile Navigation
@@ -18518,7 +18518,24 @@ var navToggle = document.querySelector("#mobile-menu-btn");
 navToggle.addEventListener("click", function () {
   document.body.classList.toggle("nav-is-open");
   document.body.classList.toggle("stop-scrolling");
-});
+}); //----------------------------------------
+// Carousel Interaction
+//----------------------------------------
+// const carouselSlide = document.querySelector(".carousel-slide");
+// const carouselImages = document.querySelectorAll(".carousel-slide img");
+// // Carousel Buttons
+// const prevBtn = document.querySelector("#prevBtn");
+// const nextBtn = document.querySelector("#nextBtn");
+// // Counter
+// let counter = 1;
+// const size = carouselImages[0].clientWidth;
+// carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+// //Btn Listeners
+// nextBtn.addEventListener("click", () => {
+//   carouselSlide.style.transition = "transform 0.4s ease-in-out";
+//   counter++;
+//   carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+// });
 },{"lottie-web":"../node_modules/lottie-web/build/player/lottie.js","./data.json":"scripts/data.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -18547,7 +18564,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49410" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63725" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
