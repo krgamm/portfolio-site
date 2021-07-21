@@ -6,9 +6,9 @@
 @use 'layout';
 @use 'abstracts';
 @use 'pages';
-@use 'src/scss/abstracts/colors' as *;
-@use "src/scss/abstracts/type-scale" as *;
-@use "src/scss/abstracts/mixins" as *;
+@use './abstracts/colors' as *;
+@use "./abstracts/type-scale" as *;
+@use "./abstracts/mixins" as *;
 
 :root {
   @each $color, $shades in $colors {

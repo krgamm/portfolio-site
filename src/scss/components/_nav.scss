@@ -28,6 +28,7 @@ nav {
   top: 0;
   z-index: 9;
   background-color: var(--clr-neutral-100);
+  box-shadow: 0 2px 5px rgab(0, 0, 0, 0.1);
   .container {
     display: flex;
     flex-direction: row;
