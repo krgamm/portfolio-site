@@ -88,7 +88,12 @@ nav {
   }
   #arrow-up {
     fill-opacity: 0;
-    transition: fill-opacity ease-in-out 250ms;
+    transform: translateY(-20px);
+    transition: all ease-in-out 250ms;
+  }
+  #arrow-down {
+    transform: translateY(0px);
+    transition: all ease-in-out 250ms;
   }
   button {
     padding: 0;
@@ -124,18 +129,19 @@ nav {
   }
   #mobile-menu {
     button {
-      color: var(--clr-accent-light-blue);
+      color: var(--clr-accent-orange);
     }
 
     transform: translateY(10px);
 
     #arrow-up {
       fill-opacity: 100;
-      fill: var(--clr-accent-light-blue);
+      fill: var(--clr-accent-orange);
+      transform: translateY(0px);
     }
     #arrow-down {
       fill-opacity: 0;
-      transition: fill-opacity ease-in-out 250ms;
+      transform: translateY(20px);
     }
   }
 }

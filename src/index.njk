@@ -1,39 +1,40 @@
 ---
-title: My homepage
-layout: 'base.njk'
+title: Home
+layout: "base.njk"
 ---
 
-
 <section id="hero">
-    <div class="container ">
-        <div id="hero-content" class="bg-neutral-200 flex-row-centered-middle">
-            <h1 id="huge-title">Hello</h1>
-            <h2>I am Kevin Gammenthaler, a designer based in Nashville, TN, focused on product and web design.
-            </h2>
-        </div>
+  <div class="container ">
+    <div id="hero-content" class="bg-neutral-200 flex-row-centered-middle">
+      <h1 id="huge-title">Hello</h1>
+      <h2>
+        I am Kevin Gammenthaler, a designer based in Nashville, TN, focused on
+        product and web design.
+      </h2>
     </div>
+  </div>
 </section>
 <section id="featured-work" class="work-section bg-neutral-200">
-    <div class="container">
-        <h2 class="section-title">Featured</h2>
-        <div class="project-card-wrapper">
-        {% include 'project-card.njk' %}
-        {% include 'project-card.njk' %}
-        </div>
+  <div class="container">
+    <h2 class="section-title">Featured</h2>
+    <div class="project-card-wrapper">
+      {%- for project in collections.featured -%}
+        {%- include 'project-card.njk'-%}
+      {%- endfor -%}
     </div>
+  </div>
 </section>
 
 <section id="other-work" class="work-section bg-neutral-100">
-    <div class="container">
-        <h2 class="section-title">Work</h2>
-        <div class="project-card-wrapper">
-             {% include 'project-card.njk' %}
-            {% include 'project-card.njk' %}
-            {% include 'project-card.njk' %}
-            {% include 'project-card.njk' %}
-            {% include 'project-card.njk' %}
-            {% include 'project-card.njk' %}
-        </div>
-    </div>
-</section>
+  <div class="container">
+    <h2 class="section-title">Work</h2>
+    <div class="project-card-wrapper">
 
+      {%- for project in collections.other -%}
+        {%- include 'project-card.njk'-%}
+      {%- endfor -%}
+    
+      
+    </div>
+  </div>
+</section>
