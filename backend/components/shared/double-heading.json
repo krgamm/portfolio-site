@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_double_headings",
+  "info": {
+    "name": "doubleHeading",
+    "icon": "align-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "descTitle": {
+      "type": "string"
+    }
+  }
+}

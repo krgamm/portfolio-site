@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_global_social_links",
+  "info": {
+    "name": "socialLinks",
+    "icon": "angle-right"
+  },
+  "options": {},
+  "attributes": {
+    "socialLink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}

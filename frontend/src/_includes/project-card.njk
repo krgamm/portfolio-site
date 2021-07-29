@@ -1,0 +1,22 @@
+<div class="project-card">
+  <img src="{{ project.data.thumbnail }}" alt="{{project.data}}" />
+  <div class="project-heading-wrapper">
+    <h2>{{ project.title }}</h2>
+    <div class="project-tags">
+        {%- for category in project.categories-%}
+          <h3> {{category.title}} </h3>  
+        {%- endfor -%}
+    </div>
+    <div class="project-btn-group">
+      <a
+        class="primary base-btn flex-row-centered-middle"
+        href="/project/{{ project.slug }}"
+      >
+        View Project
+      </a>
+      <a class="secondary base-btn flex-row-centered-middle" href="#">
+        Live Site
+      </a>
+    </div>
+  </div>
+</div>

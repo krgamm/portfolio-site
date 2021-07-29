@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_contents",
+  "info": {
+    "name": "content",
+    "icon": "anchor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "information": {
+      "type": "richtext"
+    }
+  }
+}

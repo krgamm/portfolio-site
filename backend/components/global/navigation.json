@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_global_navigations",
+  "info": {
+    "name": "navigation",
+    "icon": "air-freshener"
+  },
+  "options": {},
+  "attributes": {
+    "navLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}
