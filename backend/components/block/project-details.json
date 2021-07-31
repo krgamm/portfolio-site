@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_block_project_details",
+  "info": {
+    "name": "projectDetails",
+    "icon": "atom",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heroParagraphs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.content"
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "details": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.double-heading"
+    },
+    "heroImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.image"
+    }
+  }
+}

@@ -27,21 +27,20 @@
       "type": "boolean",
       "default": false
     },
-    "details": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.double-heading"
-    },
-    "projectContent": {
-      "type": "dynamiczone",
-      "components": [
-        "blocks.content"
-      ]
-    },
     "button": {
       "type": "component",
       "repeatable": true,
       "component": "shared.link"
+    },
+    "projectInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.project-details"
+    },
+    "projectContent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "block.project-content"
     }
   }
 }

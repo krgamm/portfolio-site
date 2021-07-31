@@ -1,43 +1,17 @@
 ---
 layout: base.njk
 ---
+{%- for project in projects-%}
+    {%- if project.title === name -%}
+        {%- include 'project-header.njk'-%}
 
-
-    <div class="project-blocks">
-        <div class="project-block project-intro-block container">
-            <div class="project-description">
-                <h2 class="project-title-h2">{{descriptiveTitle}}</h2>
-                <p>
-                    {{description[0]}}
-                    <br><br>
-                    {{description[1]}}
-
-                </p>
-            </div>
-            <ul class="project-intro-details">
-                <li>
-                    <h3 class="project-details-h3">Year</h3>
-                    <span>{{year}}</span>
-                </li>
-                <li>
-                    <h3 class="project-details-h3">Client</h3>
-                    <span>{{client}}</span>
-                </li>
-                <li>
-                    <h3 class="project-details-h3">Team</h3>
-                    <span>{{team}}</span>
-                </li>
-                <li>
-                    <h3 class="project-details-h3">Disciplines</h3>
-                    {%- for discipline in discipline -%}
-                        <span> {{discipline}} </span>  
-                    {%- endfor -%}
-                </li>
-            </ul>
-        </div>
-        <div class="project-block image-alone-full-width-block">
-            <img src="{{heroImage}}" alt="">
-        </div>
+        {# Content Section 1 #}
+        {%- for content in project.projectContent.processInfo-%}
+            {%- if content.sectionNum === "1" -%}
+                {%- include 'project-block-content.njk'-%}
+            {%- endif -%}
+        {%- endfor -%}
+    
         
         {{ content | safe }}
 
@@ -46,11 +20,16 @@ layout: base.njk
                 <h2 class="section-title">Similar Work</h2>
                 <div class="project-card-wrapper">
 
-                    {%- if projects.featured -%}
-                        {%- else -%}
-                            {%- include 'project-card.njk'-%}
-                     {%- endif -%}
+                    {%- for project in projects -%}
+                        {%- if project.featured -%}
+                             {%- else -%}
+                                {%- include 'project-card.njk'-%}
+                        {%- endif -%}
+                     {%- endfor -%}
                 </div>
             </div>
         </section>
     </div>
+
+    {%- endif -%}
+{%- endfor -%}

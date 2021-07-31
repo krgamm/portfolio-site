@@ -11,6 +11,9 @@
       "type": "string"
     },
     "descTitle": {
+      "type": "richtext"
+    },
+    "sectionNum": {
       "type": "string"
     }
   }

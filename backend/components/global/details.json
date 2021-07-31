@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_global_details",
+  "info": {
+    "name": "details",
+    "icon": "arrow-alt-circle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "details": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.double-heading"
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroParagraphs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.content"
+    }
+  }
+}

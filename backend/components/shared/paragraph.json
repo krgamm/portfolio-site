@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_paragraphs",
+  "info": {
+    "name": "paragraph",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.content"
+    }
+  }
+}

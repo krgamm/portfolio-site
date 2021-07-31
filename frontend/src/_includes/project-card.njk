@@ -1,5 +1,8 @@
 <div class="project-card">
-  <img src="{{ project.data.thumbnail }}" alt="{{project.data}}" />
+  {%- for heroThumbnail in project.projectInfo.heroImage.imageGroup-%}
+    <img src="{{ heroThumbnail.formats.medium.url }}" alt="{{heroThumbnail.alternativeText}}" />
+  {%- endfor -%}
+  
   <div class="project-heading-wrapper">
     <h2>{{ project.title }}</h2>
     <div class="project-tags">
@@ -14,9 +17,14 @@
       >
         View Project
       </a>
-      <a class="secondary base-btn flex-row-centered-middle" href="#">
-        Live Site
-      </a>
+      {%- for button in project.button-%}
+         {%- if button.active -%}
+          <a class="secondary base-btn flex-row-centered-middle" href="{{button.href}}" target="{{button.target}}">
+            {{button.label}}
+          </a>
+        {%- endif-%}
+      {%- endfor-%}
+      
     </div>
   </div>
 </div>

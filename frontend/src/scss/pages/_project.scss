@@ -1,5 +1,6 @@
 @use "../abstracts/mixins" as *;
 @use '../abstracts/font-face' as *;
+
 // -----------------------------
 // Project Block General Styling
 // -----------------------------
@@ -116,6 +117,15 @@ video {
   height: 100%;
 }
 
+.image-alone-full-width-block {
+  .hero-img {
+    margin: 0 auto;
+    width: 100%;
+    @include mq(medium) {
+      width: auto;
+    }
+  }
+}
 // .carousel-wrap {
 //   border: 5px solid black;
 //   .carousel-slide {

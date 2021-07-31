@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_contents",
+  "info": {
+    "name": "content",
+    "icon": "angle-double-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "paragraph": {
+      "type": "richtext"
+    }
+  }
+}

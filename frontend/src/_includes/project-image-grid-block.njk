@@ -1,0 +1,5 @@
+<div class="project-block image-grid-block container">
+        {%- for img in project.projectContent.projectImages -%}
+              <img src="{{ img.formats.medium.url }}" alt="{{image.alternativeText}}" />
+        {%- endfor -%}
+</div>

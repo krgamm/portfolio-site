@@ -1,6 +1,6 @@
 ---
-title: Home
-layout: "base.njk"
+name: Home
+layout: base.njk
 ---
 
 <section id="hero">
@@ -34,8 +34,9 @@ layout: "base.njk"
 
       {%- for project in projects -%}
         {%- if project.featured -%}
-          {%- else -%}
+        {%- else -%}
           {%- include 'project-card.njk'-%}
+          
         {%- endif -%}
       {%- endfor -%}
     

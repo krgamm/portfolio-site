@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_block_project_contents",
+  "info": {
+    "name": "projectContent",
+    "icon": "barcode",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "processInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.double-heading"
+    },
+    "projectImages": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "projectVideo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

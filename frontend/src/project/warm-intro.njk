@@ -14,7 +14,9 @@ description: [Island Party Music Festival is a philanthropy event hosted by the 
 liveLink:
 
 ---
-
+{%- for project in projects-%}
+    {%- if project.title === name -%}
+    
         <div class="project-block project-content-block">
             <div class="container">
                 <h2>
@@ -88,3 +90,6 @@ liveLink:
             </div>
         </div> -->
     </div>
+
+    {%- endif -%}
+    {%- endfor -%}

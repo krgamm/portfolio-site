@@ -13,61 +13,27 @@ description: [Island Party Music Festival is a philanthropy event hosted by the 
 liveLink:
 
 ---
-{# WRAP THE PROJECT CONTENT IN A FOR LOOP, OR IF STMTN TO SPECIFY THE PROJECT NEEDED #}
-        <div class="project-block project-content-block">
-            <div class="container">
-                <h2>
-                    Lets take a look at the past: Island Party 2018.
-                </h2>
-                <p>My primary responsibility as the graphic designer in 2018 was to establish a direction for the social
-                    media graphics package. Below are some samples of what we ended up choosing.</p>
-            </div>
-        </div>
-        <div class="project-block image-grid-block container">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-        </div>
-        <div class="project-block project-content-block ">
-            <div class="container">
-                <h2>
-                    A colorful explosion of gratitude.
-                </h2>
-                <p>For Island Party 2019, I was the Marketing Director / Lead Graphic Designer. We wanted the marketing
-                    material to be eye-catching and we came up with two main focuses: revisiting the color shceme and
-                    introduce motion graphics.</p>
-            </div>
-        </div>
-        <div class="project-block image-grid-block container">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-        </div>
-        <div class="project-block contained-media-with-space container">
-            <iframe src="https://player.vimeo.com/video/352785729" width="1039" height="916" frameborder="0"
-                allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
-        <div class="project-block project-content-block">
-            <div class="container">
-                <h2>
-                    Pictures, pictures, and more pictures.
-                </h2>
-                <p>A problem we had for Island Party 2016 and 2017 was that we lacked any photos from the event. To
-                    solve
-                    this in 2019, we organized a group of photographers to capture the event so we could continuously
-                    create
-                    an archive of event photos.<br><br>Below are some select shots taken by me from our preliminary
-                    event —
-                    Battle of the Bands — and Island
-                    Party Music Festival 2019,</p>
-            </div>
-        </div>
-        <div class="project-block image-grid-block container">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-        </div>
-    </div>
+
+
+{%- for project in projects-%}
+    {%- if project.title === name -%}
+        
+
+        {# Content Section 2 #}
+        {%- for content in project.projectContent.processInfo-%}
+            {%- if content.sectionNum === "2" -%}
+                {%- include 'project-block-content.njk'-%}
+            {%- endif -%}
+        {%- endfor -%}
+
+        {# Content Section 3 #}
+        {%- for content in project.projectContent.processInfo-%}
+            {%- if content.sectionNum === "3" -%}
+                {%- include 'project-block-content.njk'-%}
+            {%- endif -%}
+        {%- endfor -%}
+        
+      
+
+    {%- endif -%}
+    {%- endfor -%}

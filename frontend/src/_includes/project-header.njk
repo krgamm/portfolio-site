@@ -1,0 +1,34 @@
+<div class="project-blocks">
+        <div class="project-block project-intro-block container">
+            <div class="project-description">
+                <h2 class="project-title-h2">{{project.projectInfo.heroTitle}}</h2>
+
+                {%- for item in project.projectInfo.heroParagraphs-%}
+                    <p>
+                        {{item.paragraph}}
+                    </p>
+                        {%- if loop.first -%}
+                            <br>
+                        {%- endif -%}
+                {%- endfor -%}
+            </div>
+            <ul class="project-intro-details">
+                {%- for detail in project.projectInfo.details-%}
+                    <li>
+                        <h3 class="project-details-h3">{{detail.title}}</h3>
+                        <span>{{detail.descTitle}}</span>
+                    </li>
+                {%- endfor-%}
+                <li>
+                    <h3 class="project-details-h3">Disciplines</h3>
+                    {%- for category in project.categories -%}
+                        <span> {{category.title}} </span>  
+                    {%- endfor -%}
+                </li>
+            </ul>
+        </div>
+        <div class="center-block project-block image-alone-full-width-block">
+            {%- for heroThumbnail in project.projectInfo.heroImage.imageGroup-%}
+                <img class="hero-img" src="{{ heroThumbnail.url }}" alt="{{heroThumbnail.alternativeText}}" />
+            {%- endfor -%}
+        </div>

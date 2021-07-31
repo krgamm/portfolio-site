@@ -39,6 +39,8 @@ button,
   transition: all ease-in-out 250ms;
   border: solid 2px transparent;
   color: var(--clr-neutral-600);
+  font-weight: $fw-b;
+
   @include mq(medium) {
     &:hover {
       border: solid 2px var(--clr-accent-orange);

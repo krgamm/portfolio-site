@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_images",
+  "info": {
+    "name": "image",
+    "icon": "balance-scale-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "imageGroup": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

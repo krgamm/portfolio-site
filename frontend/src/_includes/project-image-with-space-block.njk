@@ -1,0 +1,5 @@
+<div class="project-block image-alone-full-width-block">
+            {%- for heroThumbnail in project.projectInfo.heroImage.imageGroup-%}
+                <img src="{{ heroThumbnail.url }}" alt="{{heroThumbnail.alternativeText}}" />
+            {%- endfor -%}
+</div>
