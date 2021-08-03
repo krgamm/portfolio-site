@@ -24,11 +24,15 @@
 
 nav {
   padding: 1em 0;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
+  transition: top ease-in-out 250ms;
+
   z-index: 9;
   background-color: var(--clr-neutral-100);
-  box-shadow: 0 2px 5px rgab(0, 0, 0, 0.1);
+  border-bottom: 5px solid var(--clr-neutral-600);
+
   .container {
     display: flex;
     flex-direction: row;

@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "processInfo": {
+    "sectionContent": {
       "type": "component",
       "repeatable": true,
       "component": "shared.double-heading"
@@ -35,6 +35,11 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "additionalContent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.double-heading"
     }
   }
 }

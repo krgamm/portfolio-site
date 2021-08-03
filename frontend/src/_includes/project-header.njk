@@ -2,12 +2,19 @@
         <div class="project-block project-intro-block container">
             <div class="project-description">
                 <h2 class="project-title-h2">{{project.projectInfo.heroTitle}}</h2>
+                    <br>
+                {%- for item in project.projectInfo.heroContent-%}
+                    {%- if item.title === null-%}
+                        {%- else -%}
+                        
+                            <h3 class="project-details-h3">{{item.title}}</h3>
 
-                {%- for item in project.projectInfo.heroParagraphs-%}
-                    <p>
-                        {{item.paragraph}}
-                    </p>
-                        {%- if loop.first -%}
+                    {%- endif -%}
+
+                    <p>{{item.descTitle}} </p>
+
+                    {%- if loop.last -%}
+                        {%- else -%}
                             <br>
                         {%- endif -%}
                 {%- endfor -%}

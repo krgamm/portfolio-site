@@ -3,33 +3,19 @@ layout: base.njk
 ---
 {%- for project in projects-%}
     {%- if project.title === name -%}
-        {%- include 'project-header.njk'-%}
 
-        {# Content Section 1 #}
-        {%- for content in project.projectContent.processInfo-%}
-            {%- if content.sectionNum === "1" -%}
-                {%- include 'project-block-content.njk'-%}
-            {%- endif -%}
-        {%- endfor -%}
+        {%- include 'project-header.njk'-%}
     
         
         {{ content | safe }}
-
-        <section id="similar-work" class="work-section bg-neutral-200">
+    <section id="similar-work" class="work-section bg-neutral-200">
             <div class="container">
-                <h2 class="section-title">Similar Work</h2>
-                <div class="project-card-wrapper">
-
-                    {%- for project in projects -%}
-                        {%- if project.featured -%}
-                             {%- else -%}
-                                {%- include 'project-card.njk'-%}
-                        {%- endif -%}
-                     {%- endfor -%}
+                    <a class="primary base-btn flex-row-centered-middle" href="/#featured-work" target="_self">
+            Back to Work
+          </a>
                 </div>
             </div>
-        </section>
-    </div>
+    </section>
 
     {%- endif -%}
 {%- endfor -%}

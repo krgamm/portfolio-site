@@ -18,7 +18,7 @@ layout: base.njk
   <div class="container">
     <h2 class="section-title">Featured</h2>
     <div class="project-card-wrapper">
-      {%- for project in projects -%}
+      {%- for project in projects | reverse -%}
         {%- if project.featured -%}
           {%- include 'project-card.njk'-%}
         {%- endif -%}
@@ -36,7 +36,6 @@ layout: base.njk
         {%- if project.featured -%}
         {%- else -%}
           {%- include 'project-card.njk'-%}
-          
         {%- endif -%}
       {%- endfor -%}
     

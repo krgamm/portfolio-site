@@ -19,7 +19,6 @@
   .project-title-h2 {
     font-size: var(--fs-600);
     line-height: 1.25;
-    margin-bottom: 0.5em;
   }
   .project-intro-details {
     padding: 1em;
@@ -34,16 +33,25 @@
       &:last-child {
         margin-bottom: 0;
       }
-      .project-details-h3 {
-        font-size: var(--fs-200);
-        text-transform: uppercase;
-        margin-bottom: 0.25em;
-      }
       span {
         font-size: var(--fs-300);
       }
     }
   }
+  .project-description {
+    .project-details-h3 {
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+    }
+  }
+
+  .project-details-h3 {
+    font-size: var(--fs-200);
+    text-transform: uppercase;
+    margin-bottom: 0.25em;
+    letter-spacing: 0.08rem;
+  }
+
   // -----------------------------
   // Intro (Hero) Block Styling (Desktop)
   // -----------------------------
@@ -75,6 +83,7 @@
   h2 {
     margin-bottom: 0.5em;
   }
+
   // -----------------------------
   //  Project Content Block (Desktop)
   // -----------------------------
@@ -86,6 +95,10 @@
       h2 {
         margin: 0 1em 0 0;
         width: 100%;
+      }
+      p {
+        width: max-content;
+        max-width: 40%;
       }
     }
   }
@@ -123,6 +136,7 @@ video {
     width: 100%;
     @include mq(medium) {
       width: auto;
+      max-height: 1200px;
     }
   }
 }
@@ -133,3 +147,9 @@ video {
 //     overflow: hidden;
 //   }
 // }
+
+.contained-media-with-space {
+  iframe {
+    width: 100%;
+  }
+}
