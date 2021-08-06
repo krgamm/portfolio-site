@@ -6,30 +6,30 @@ name: NASA Redesign
 {%- for project in projects-%}
     {%- if project.title === name -%}
 
-        {%- if project.projectContent.projectImages -%}
-                        <div class="project-block image-grid-with-description-block container">
-                        <div class="process-description">
-                                {%- for additionalContent in project.projectContent.additionalContent-%}
-                                    {%- if additionalContent.sectionNum === "1" or additionalContent.sectionNum === "2"-%}
-                                        <h3>{{additionalContent.title}}</h3>
-                                        <p>{{additionalContent.descTitle | safe}}</p>
-                                        
-                                        {%- if loop.last -%}
-                                            {% else %}
-                                                <br><br>
-                                        {%- endif -%}
-                                    {%- endif -%}
-                                {%- endfor -%}
-                            </div>
-                            <div class="image-grid">
-                                {%- for img in project.projectContent.projectImages -%}
-                                        {%- if 'process1' in img.name -%}
-                                            <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
-                                        {%- endif -%}
-                                {%- endfor -%}
-                            </div>                    
+                {# Content Section 1 #}
+                {%- for content in project.projectContent.sectionContent-%}
+                    {%- if content.sectionNum === "1" -%}
+                        {%- include 'project-block-content.njk'-%}
+                    {%- endif -%}
+                {%- endfor -%}
+
+
+                {%- for additionalContent in project.projectContent.additionalContent-%}
+                        {%- if additionalContent.sectionNum === 1-%}
+                             <div class="project-block images-with-description-block container">
+                                    
+                                 <div class="process-description">
+                                    <h3>{{additionalContent.title}}</h3>
+                                    <p>{{additionalContent.description | safe}}</p>
+                                </div>
+                                   <div class="image-grid">
+                                    {%- for img in additionalContent.images-%}
+                                        <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
+                                    {%- endfor -%}
+                                    </div>       
                         </div>
-                {%- endif -%}
+                        {%- endif -%}
+                {%- endfor -%}
                 
 
                 {# Content Section 2 #}
@@ -38,33 +38,23 @@ name: NASA Redesign
                         {%- include 'project-block-content.njk'-%}
                     {%- endif -%}
                 {%- endfor -%}
-
-                {%- if project.projectContent.projectImages -%}
-                        <div class="project-block image-grid-with-description-block container">
-                        <div class="process-description">
-                                {%- for additionalContent in project.projectContent.additionalContent-%}
-                                    {%- if additionalContent.sectionNum === "1" or additionalContent.sectionNum === "2"-%}
-                                    {%- else -%}
-                                        <h3>{{additionalContent.title}}</h3>
-                                        <p>{{additionalContent.descTitle | safe}}</p>
-                                        
-                                        {%- if loop.last -%}
-                                            {% else %}
-                                                <br><br>
-                                        {%- endif -%}
-                                    {%- endif -%}
-                                {%- endfor -%}
-                            </div>
-                            <div class="image-grid">
-                                {%- for img in project.projectContent.projectImages -%}
-                                        {%- if 'process2' in img.name -%}
-                                            <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
-                                        {%- endif -%}
-                                {%- endfor -%}
-                            </div>                    
+                
+                {%- for additionalContent in project.projectContent.additionalContent-%}
+                        {%- if additionalContent.sectionNum === 2-%}
+                             <div class="project-block images-with-description-block container">
+                                    
+                                 <div class="process-description">
+                                    <h3>{{additionalContent.title}}</h3>
+                                    <p>{{additionalContent.description | safe}}</p>
+                                </div>
+                                   <div class="solo-img nasa-solo-img">
+                                    {%- for img in additionalContent.images-%}
+                                        <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
+                                    {%- endfor -%}
+                                    </div>       
                         </div>
-                {%- endif -%}
-
+                        {%- endif -%}
+                {%- endfor -%}
 
 
                 {# Content Section 3 #}
@@ -74,33 +64,22 @@ name: NASA Redesign
                     {%- endif -%}
                 {%- endfor -%}
 
-
-                    {%- if project.projectContent.projectImages -%}
-                        <div class="project-block image-grid-with-description-block container">
-                        <div class="process-description">
-                                {%- for additionalContent in project.projectContent.additionalContent-%}
-                                    {%- if additionalContent.sectionNum === "1" or additionalContent.sectionNum === "2"-%}
-                                    {%- else -%}
-                                        <h3>{{additionalContent.title}}</h3>
-                                        <p>{{additionalContent.descTitle | safe}}</p>
-                                        
-                                        {%- if loop.last -%}
-                                            {% else %}
-                                                <br><br>
-                                        {%- endif -%}
-                                    {%- endif -%}
-                                {%- endfor -%}
-                            </div>
-                            <div class="image-grid">
-                                {%- for img in project.projectContent.projectImages -%}
-                                        {%- if 'process3' in img.name -%}
-                                            <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
-                                        {%- endif -%}
-                                {%- endfor -%}
-                            </div>                    
+                {%- for additionalContent in project.projectContent.additionalContent-%}
+                        {%- if additionalContent.sectionNum === 3-%}
+                             <div class="project-block images-with-description-block container">
+                                    
+                                 <div class="process-description">
+                                    <h3>{{additionalContent.title}}</h3>
+                                    <p>{{additionalContent.description | safe}}</p>
+                                </div>
+                                   <div class="image-grid">
+                                    {%- for img in additionalContent.images-%}
+                                        <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
+                                    {%- endfor -%}
+                                    </div>       
                         </div>
-                {%- endif -%}
-
+                        {%- endif -%}
+                {%- endfor -%}
 
                 {# Content Section 4 #}
                 {%- for content in project.projectContent.sectionContent-%}
@@ -109,31 +88,18 @@ name: NASA Redesign
                     {%- endif -%}
                 {%- endfor -%}
 
-                {%- if project.projectContent.projectImages -%}
-                        <div class="project-block image-grid-with-description-block container">
-                        <div class="process-description">
-                                {%- for additionalContent in project.projectContent.additionalContent-%}
-                                    {%- if additionalContent.sectionNum === "1" or additionalContent.sectionNum === "2"-%}
-                                    {%- else -%}
-                                        <h3>{{additionalContent.title}}</h3>
-                                        <p>{{additionalContent.descTitle | safe}}</p>
-                                        
-                                        {%- if loop.last -%}
-                                            {% else %}
-                                                <br><br>
-                                        {%- endif -%}
-                                    {%- endif -%}
-                                {%- endfor -%}
-                            </div>
-                            <div class="image-grid">
-                                {%- for img in project.projectContent.projectImages -%}
-                                        {%- if 'process4' in img.name -%}
-                                            <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
-                                        {%- endif -%}
-                                {%- endfor -%}
-                            </div>                    
+                {%- for additionalContent in project.projectContent.additionalContent-%}
+                        {%- if additionalContent.sectionNum === 4-%}
+                             <div class="project-block images-with-description-block container">
+                                   <div class="image-grid nasa-final">
+                                    {%- for img in additionalContent.images-%}
+                                        <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
+                                    {%- endfor -%}
+                                    </div>       
                         </div>
-                {%- endif -%}
+                        {%- endif -%}
+                {%- endfor -%}
+               
 
             {%- endif -%}
 {%- endfor -%}

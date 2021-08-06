@@ -1,5 +1,5 @@
 ---
-layout: project-highlight.njk
+layout: project.njk
 name: Puritan Financial
 ---
 
@@ -7,41 +7,61 @@ name: Puritan Financial
     {%- if project.title === name -%}
 
 
+        {# Content Section 1 #}
+                {%- for content in project.projectContent.sectionContent-%}
+                    {%- if content.sectionNum === "1" -%}
+                        {%- include 'project-block-content.njk'-%}
+                    {%- endif -%}
+                {%- endfor -%}
+
+                <div class="project-block contained-media-with-space container">
+                    <iframe src="https://player.vimeo.com/video/352779495" width="1039" height="916" frameborder="0"
+                        allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+
+            {# Content Section 2 #}
+                {%- for content in project.projectContent.sectionContent-%}
+                    {%- if content.sectionNum === "2" -%}
+                        {%- include 'project-block-content.njk'-%}
+                    {%- endif -%}
+                {%- endfor -%}
+
+            {%- for additionalContent in project.projectContent.additionalContent-%}
+                        {%- if additionalContent.sectionNum === 2-%}
+                             <div class="project-block images-with-description-block container">
+                                   <div class="image-grid puritan-image-grid">
+                                    {%- for img in additionalContent.images-%}
+                                        <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
+                                    {%- endfor -%}
+                                    </div>       
+                        </div>
+                        {%- endif -%}
+                {%- endfor -%}
+                
+
+        {# Content Section 3 #}
+                {%- for content in project.projectContent.sectionContent-%}
+                    {%- if content.sectionNum === "3" -%}
+                        {%- include 'project-block-content.njk'-%}
+                    {%- endif -%}
+                {%- endfor -%}
+            {%- for additionalContent in project.projectContent.additionalContent-%}
+                        {%- if additionalContent.sectionNum === 3-%}
+                             <div class="project-block images-with-description-block container">
+                                   <div class="image-grid puritan-image-grid">
+                                    {%- for img in additionalContent.images-%}
+                                        <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
+                                    {%- endfor -%}
+                                    </div>       
+                        </div>
+                        {%- endif -%}
+                {%- endfor -%}
+                     
+
         
-       
-        {# Content Section 2 #}
-        {%- for content in project.projectContent.processInfo-%}
-            {%- if content.sectionNum === "2" -%}
-                {%- include 'project-block-content.njk'-%}
-            {%- endif -%}
-        {%- endfor -%}
 
-        <div class="project-block image-grid-block container">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-            <img src="{{thumbnail}}" alt="">
-        </div>
-        <div class="project-block contained-media-with-space container">
-            <iframe src="https://player.vimeo.com/video/352785729" width="1039" height="916" frameborder="0"
-                allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
+        
 
-        <!-- <div class="project-block carousel-wrap container">
-            <div class="carousel-slide">
-                <img id="lastClone" class="carousel-item carousel-transition" src="./images/IMG_2060 2.JPG" alt="">
-                <img class="carousel-item carousel-transition" src="{{thumbnail}}" alt="">
-                <img class="carousel-item carousel-transition" src="./images/IMG_2060 2.JPG" alt="">
-                <img class="carousel-item carousel-transition" src="{{thumbnail}}" alt="">
-                <img class="carousel-item carousel-transition" src="./images/IMG_2060 2.JPG" alt="">
-                <img id="firstClone" class="carousel-item carousel-transition" src="{{thumbnail}}"
-                    alt="">
-            </div>
-            <div class="carouel-nav-wrap">
-                <button id="prevBtn">Prev</button>
-                <button id="nextBtn">Next</button>
-            </div>
-        </div> -->
-    </div>
+
 {%- endif -%}
 {%- endfor -%}

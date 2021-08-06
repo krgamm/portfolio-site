@@ -4,18 +4,20 @@ layout: base.njk
 {%- for project in projects-%}
     {%- if project.title === name -%}
 
+
         {%- include 'project-header.njk'-%}
     
-        
+    
         {{ content | safe }}
-    <section id="similar-work" class="work-section bg-neutral-200">
-            <div class="container">
-                    <a class="primary base-btn flex-row-centered-middle" href="/#featured-work" target="_self">
+
+
+
+            <div id="sticky-btn-wrapper"class="container">
+                    <a id="back-to-work-btn" class="primary base-btn flex-row-centered-middle" href="/#featured-work" target="_self">
             Back to Work
           </a>
                 </div>
             </div>
-    </section>
 
     {%- endif -%}
 {%- endfor -%}

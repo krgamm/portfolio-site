@@ -6,18 +6,13 @@
                 {%- for item in project.projectInfo.heroContent-%}
                     {%- if item.title === null-%}
                         {%- else -%}
-                        
                             <h3 class="project-details-h3">{{item.title}}</h3>
+                            {{item.descTitle | safe}}
 
-                    {%- endif -%}
-
-                    <p>{{item.descTitle}} </p>
-
-                    {%- if loop.last -%}
-                        {%- else -%}
-                            <br>
-                        {%- endif -%}
+                     {%- endif -%}
                 {%- endfor -%}
+                    {%- include 'secondary-button.njk'-%}
+
             </div>
             <ul class="project-intro-details">
                 {%- for detail in project.projectInfo.details-%}
@@ -33,6 +28,7 @@
                     {%- endfor -%}
                 </li>
             </ul>
+
         </div>
         <div class="center-block project-block image-alone-full-width-block">
             {%- for heroThumbnail in project.projectInfo.heroImage.imageGroup-%}

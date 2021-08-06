@@ -7,12 +7,7 @@ layout: project.njk
     {%- if project.title === name -%}
     
 
-       {# Content Section 1 #}
-        {%- for content in project.projectContent.sectionContent-%}
-            {%- if content.sectionNum === "1" -%}
-                {%- include 'project-block-content.njk'-%}
-            {%- endif -%}
-        {%- endfor -%}
+       
 
         {{content | safe}}
 

@@ -1,5 +1,5 @@
 ---
-layout: project-highlight.njk
+layout: project.njk
 name: Island Party
 ---
 
@@ -7,23 +7,41 @@ name: Island Party
 {%- for project in projects-%}
     {%- if project.title === name -%}
         
+        {# Content Section 1 #}
+        {%- for content in project.projectContent.sectionContent-%}
+            {%- if content.sectionNum === "1" -%}
+                {%- include 'project-block-content.njk'-%}
+            {%- endif -%}
+        {%- endfor -%}
+
 
         {%- if project.projectContent.projectImages -%}
             <div class="project-block image-grid-block container">
                 {%- for img in project.projectContent.projectImages -%}
-                    {%- if 'process' in img.name -%}
+                    {%- if 'process1' in img.name -%}
                         <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
                      {%- endif -%}
                  {%- endfor -%}
             </div>
         {%- endif -%}
 
+        
         {# Content Section 2 #}
         {%- for content in project.projectContent.sectionContent-%}
             {%- if content.sectionNum === "2" -%}
                 {%- include 'project-block-content.njk'-%}
             {%- endif -%}
         {%- endfor -%}
+
+        {%- if project.projectContent.projectImages -%}
+            <div class="project-block image-grid-block container">
+                {%- for img in project.projectContent.projectImages -%}
+                    {%- if 'process2' in img.name -%}
+                        <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
+                     {%- endif -%}
+                 {%- endfor -%}
+            </div>
+        {%- endif -%}
 
         {# {%- include 'project-image-with-space-block.njk'-%} #}
 
@@ -33,6 +51,16 @@ name: Island Party
                 {%- include 'project-block-content.njk'-%}
             {%- endif -%}
         {%- endfor -%}
+
+        {%- if project.projectContent.projectImages -%}
+            <div class="project-block image-grid-block container">
+                {%- for img in project.projectContent.projectImages -%}
+                    {%- if 'process3' in img.name -%}
+                        <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
+                     {%- endif -%}
+                 {%- endfor -%}
+            </div>
+        {%- endif -%}
         
       
 

@@ -58,3 +58,13 @@ button,
     }
   }
 }
+
+#sticky-btn-wrapper {
+  position: sticky;
+  bottom: 2em;
+  margin-bottom: 2em;
+  #back-to-work-btn {
+    width: 50%;
+    margin: auto;
+  }
+}
