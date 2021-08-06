@@ -64,24 +64,24 @@ navToggle.addEventListener("click", () => {
 //----------------------------------------
 // Hide Nav on scroll
 //----------------------------------------
-let prevScrollpos = window.pageYOffset;
+// let prevScrollpos = window.pageYOffset;
 
-document.addEventListener("mousemove", (e) => {
-  let mouseY = e.clientY;
-  if (mouseY <= 110) {
-    document.querySelector("nav").style.top = "0";
-  }
-});
+// document.addEventListener("mousemove", (e) => {
+//   let mouseY = e.clientY;
+//   if (mouseY <= 110) {
+//     document.querySelector("nav").style.top = "0";
+//   }
+// });
 
-window.onscroll = function () {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector("nav").style.top = "0";
-  } else {
-    document.querySelector("nav").style.top = "-120px";
-  }
-  prevScrollpos = currentScrollPos;
-};
+// window.onscroll = function () {
+//   let currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.querySelector("nav").style.top = "0";
+//   } else {
+//     document.querySelector("nav").style.top = "-120px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// };
 
 //----------------------------------------
 // Carousel Interaction
