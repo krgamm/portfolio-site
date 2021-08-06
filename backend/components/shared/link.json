@@ -8,7 +8,8 @@
   "options": {},
   "attributes": {
     "label": {
-      "type": "string"
+      "type": "string",
+      "default": "null"
     },
     "href": {
       "type": "string"

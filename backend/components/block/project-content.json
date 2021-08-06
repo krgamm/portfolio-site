@@ -25,21 +25,14 @@
       "pluginOptions": {}
     },
     "projectVideo": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
     },
     "additionalContent": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.double-heading"
+      "component": "global.additional-content"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_global_additional_contents",
+  "info": {
+    "name": "additionalContent",
+    "icon": "basketball-ball",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "sectionNum": {
+      "type": "integer"
+    }
+  }
+}
