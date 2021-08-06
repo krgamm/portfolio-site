@@ -1,0 +1,9 @@
+{%- if project.projectContent.projectImages -%}
+            <div class="project-block image-grid-block container">
+                {%- for img in project.projectContent.projectImages -%}
+                    {%- if {{processNum}} in img.name -%}
+                        <img src="{{ img.formats.medium.url }}" alt="{{img.alternativeText}}" />
+                     {%- endif -%}
+                 {%- endfor -%}
+            </div>
+{%- endif -%}

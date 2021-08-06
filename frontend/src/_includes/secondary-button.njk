@@ -1,0 +1,7 @@
+{%- for button in project.button-%}
+    {%- if button.active -%}
+        <a class="secondary base-btn flex-row-centered-middle" href="{{button.href}}" target="{{button.target}}">
+            {{button.label}}
+        </a>
+    {%- endif-%}
+{%- endfor-%}
