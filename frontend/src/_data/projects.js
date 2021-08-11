@@ -2,7 +2,7 @@ const Cache = require("@11ty/eleventy-cache-assets");
 require("dotenv").config();
 
 async function fetchData(apiPath) {
-  const url = `http://localhost:1337${apiPath}`;
+  const url = `https://kgamm-portfolio-backend.herokuapp.com${apiPath}`;
 
   try {
     let json = await Cache(url, {
