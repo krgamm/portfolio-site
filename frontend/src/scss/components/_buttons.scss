@@ -19,6 +19,7 @@ button,
   letter-spacing: 1px;
   border-radius: 0.3em;
   width: 100%;
+  max-height: 42px;
 }
 
 .primary {
@@ -38,12 +39,21 @@ button,
   transition: all ease-in-out 250ms;
   border: solid 2px transparent;
   color: var(--clr-neutral-600);
+  svg {
+    margin-right: 0.5em;
+    transition: fill ease-in-out 250ms;
+  }
 
   @include mq(medium) {
     &:hover {
-      border: solid 2px var(--clr-accent-orange);
+      border: solid 3px var(--clr-accent-orange);
       transform: translateY(-2px);
       color: var(--clr-accent-orange);
+      svg,
+      path {
+        fill: var(--clr-accent-orange);
+        transition: fill ease-in-out 250ms;
+      }
     }
   }
 }
