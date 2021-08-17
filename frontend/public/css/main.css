@@ -33,14 +33,15 @@ h1 {
   font-weight: 700;
 }
 
-#hero #huge-title {
+#hero .huge-title {
   font-family: Race Brannt, sans-serif;
-  font-size: var(--fs-900);
-  line-height: 1;
+  font-size: var(--fs-800);
+  line-height: 0.95em;
 }
-#hero h2 {
+#hero .hero-title {
   font-size: var(--fs-400);
   font-weight: 400;
+  line-height: 1.7;
 }
 
 .section-title {
@@ -360,14 +361,13 @@ button,
 }
 
 nav {
-  padding: 1em 0;
+  padding: 0.5em 0;
   position: fixed;
   width: 100%;
   top: 0;
   transition: top ease-in-out 250ms;
   z-index: 9;
   background-color: var(--clr-neutral-200);
-  border-bottom: 5px solid var(--clr-neutral-600);
 }
 nav .container {
   display: flex;
@@ -597,6 +597,7 @@ nav #middle {
 }
 .images-with-description-block .process-description h3 {
   font-size: var(--fs-400);
+  margin-bottom: 0.5em;
 }
 .images-with-description-block .nasa-final {
   position: relative;
@@ -714,6 +715,9 @@ footer {
   flex-shrink: 0;
 }
 
+#hero {
+  padding: 0;
+}
 @media (min-width: 768px) {
   #hero {
     padding-top: 0;
@@ -721,15 +725,22 @@ footer {
   }
 }
 #hero #hero-content {
+  position: relative;
+  overflow: hidden;
   border-radius: 1em;
   height: 80vh;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 2em;
   margin-top: 4em;
 }
-#hero #hero-content h2 {
-  max-width: 450px;
+#hero #hero-content .hero-title {
+  position: relative;
+  z-index: 3;
+  max-width: 425px;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 0.5em;
 }
 @media (min-width: 768px) {
   #hero #hero-content {
@@ -778,6 +789,23 @@ footer {
     margin-top: 3em;
   }
 }
+#dvd-logo {
+  position: absolute;
+  z-index: 0;
+  width: min-content;
+  height: auto;
+  width: 200px;
+}
+#dvd-logo svg {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  #dvd-logo {
+    width: 400px;
+  }
+}
+
 #about .container {
   display: flex;
   flex-direction: column-reverse;

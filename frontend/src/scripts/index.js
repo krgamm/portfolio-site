@@ -52,13 +52,74 @@
 // Mobile Navigation
 //----------------------------------------
 let navToggle = document.querySelector("#mobile-menu-btn");
-let count = 0;
+let navLinks = document.querySelectorAll(".nav-link");
+
 navToggle.addEventListener("click", () => {
   document.body.classList.toggle("nav-is-open");
   document.body.classList.toggle("stop-scrolling");
+});
 
-  count++;
-  console.log(count);
+//----------------------------------------
+// DVD Logo Animation
+//----------------------------------------
+let dvdEl = document.querySelector("#dvd-logo");
+let heroContainer = document.querySelector("#hero-content");
+let containerHeight = heroContainer.offsetHeight;
+let containerWidth = heroContainer.offsetWidth;
+let dvdElHeight = dvdEl.offsetHeight;
+let dvdElWidth = dvdEl.offsetWidth;
+const FPS = 60;
+dvdEl.style.fill = "#4778ff";
+
+// Logo verlocity variables
+
+let yPosition = 30;
+let xPosition = 30;
+// let yPosition = Math.floor(Math.random() * (containerHeight - 300));
+// let xPosition = Math.floor(Math.random() * (containerWidth - 300));
+let xSpeed = 2;
+let ySpeed = 2;
+
+function update() {
+  dvdEl.style.left = xPosition + "px";
+  dvdEl.style.top = yPosition + "px";
+}
+
+setInterval(() => {
+  if (xPosition + dvdElWidth >= containerWidth || xPosition < 0) {
+    xSpeed = -xSpeed;
+    dvdEl.style.fill = randomColor();
+  } else if (yPosition + dvdElHeight >= containerHeight || yPosition < 0) {
+    ySpeed = -ySpeed;
+    dvdEl.style.fill = randomColor();
+  }
+  xPosition += xSpeed;
+  yPosition += ySpeed;
+  update();
+}, 1000 / FPS);
+
+let colorPicker = 0;
+function randomColor() {
+  let color = "#";
+  let colors = ["4778ff", "e06238"];
+
+  if (colorPicker === 0) {
+    colorPicker = 1;
+    return (color += colors[colorPicker]);
+  } else {
+    colorPicker = 0;
+    return (color += colors[colorPicker]);
+  }
+}
+
+window.addEventListener("resize", () => {
+  containerHeight = heroContainer.offsetHeight;
+  containerWidth = heroContainer.offsetWidth;
+  dvdElHeight = dvdEl.offsetHeight;
+  dvdElWidth = dvdEl.offsetWidth;
+
+  yPosition = yPosition;
+  xPosition = xPosition;
 });
 
 //----------------------------------------

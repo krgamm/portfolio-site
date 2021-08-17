@@ -20,14 +20,15 @@ h1 {
 }
 
 #hero {
-  #huge-title {
+  .huge-title {
     font-family: $ff-stylized;
-    font-size: var(--fs-900);
-    line-height: 1;
+    font-size: var(--fs-800);
+    line-height: 0.95em;
   }
-  h2 {
+  .hero-title {
     font-size: var(--fs-400);
     font-weight: $fw-n;
+    line-height: 1.7;
   }
 }
 
