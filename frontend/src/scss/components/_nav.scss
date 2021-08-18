@@ -121,6 +121,11 @@ nav {
 
   transform: translateY(-100%);
   transition: transform ease-in-out 250ms;
+  a {
+    &:visited {
+      color: var(--clr-neutral-600);
+    }
+  }
   @include mq(medium) {
     display: none;
   }

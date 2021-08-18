@@ -451,6 +451,9 @@ nav #middle {
   transform: translateY(-100%);
   transition: transform ease-in-out 250ms;
 }
+#nav-link-wrapper-mobile a:visited {
+  color: var(--clr-neutral-600);
+}
 @media (min-width: 768px) {
   #nav-link-wrapper-mobile {
     display: none;
@@ -957,6 +960,7 @@ footer {
   background-color: var(--clr-neutral-100);
   padding-top: 2em;
   padding-bottom: 2em;
+  box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.05);
 }
 .project-content-block h2 {
   margin-bottom: 0.5em;

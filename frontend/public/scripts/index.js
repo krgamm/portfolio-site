@@ -52,11 +52,20 @@
 // Mobile Navigation
 //----------------------------------------
 let navToggle = document.querySelector("#mobile-menu-btn");
-let navLinks = document.querySelectorAll(".nav-link");
+let navLinks = document
+  .querySelector("#nav-link-wrapper-mobile")
+  .querySelectorAll(".nav-link");
 
 navToggle.addEventListener("click", () => {
   document.body.classList.toggle("nav-is-open");
   document.body.classList.toggle("stop-scrolling");
+});
+
+navLinks.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    document.body.classList.toggle("nav-is-open");
+    document.body.classList.toggle("stop-scrolling");
+  });
 });
 
 //----------------------------------------
