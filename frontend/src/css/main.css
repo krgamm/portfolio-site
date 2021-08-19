@@ -496,7 +496,13 @@ nav #middle {
 }
 
 #contact {
-  background-color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-200);
+  height: 95vh;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+#contact .container {
   width: 100%;
 }
 #contact .container h2 {
@@ -812,6 +818,13 @@ footer span {
   }
 }
 
+#about {
+  height: 80vh;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--clr-neutral-100);
+}
 #about .container {
   display: flex;
   flex-direction: column-reverse;
