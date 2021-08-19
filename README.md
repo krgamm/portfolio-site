@@ -19,3 +19,10 @@ Technologies used:
 - Lotti (Animations)
 - Vanilla JS
 - SASS
+- Cloudinary
+
+Purpose:
+Challenges:
+Process:
+Decisions:
+Continued Learning:

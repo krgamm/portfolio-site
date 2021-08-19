@@ -23,11 +23,11 @@
     flex-direction: column;
     align-items: center;
     padding: 2em;
-    margin-top: 4em;
 
     @include mq(medium) {
       padding: 4em;
       max-height: 762px;
+      margin-top: 4em;
     }
   }
 }
